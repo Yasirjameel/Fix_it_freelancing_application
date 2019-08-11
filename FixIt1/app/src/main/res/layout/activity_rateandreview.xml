@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rating_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rateandreviewActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+
+        android:text="Rate and Review"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Feedback"
+        android:layout_below="@+id/ratingBar"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/feed"
+        android:background="#130a0a"
+        android:text="Send feedback"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/btnSubmit"
+        android:text="Recent Review and Ratings"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        android:layout_below="@+id/textView3"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView3">
+        <ListView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/simple_list_view2"
+            android:divider="@color/colorPrimaryDark"
+            android:dividerHeight="1dp">
+        </ListView>
+        <ListView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/simple_list_view"
+            android:divider="@color/colorPrimaryDark"
+            android:dividerHeight="1dp">
+        </ListView>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
